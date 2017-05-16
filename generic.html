@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Editorial by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>ONLINE POS</strong> by strathmore</a>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>PRODUCTS</h1>
+									</header>
+									<button onclick="document.getElementById('id01').style.display='block'">ADD PRODUCT</button>
+
+									<div id="id01" class="modal">
+									  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+									  <form class="modal-content animate" action="/action_page.php">
+									    <div class="container">
+
+									      <label align="center"><h2>ADD PRODUCT</h2></label>
+									      <br>
+
+									      <label><b>Serial No.</b></label>
+									      <input type="text" placeholder="Serial No." name="Serial No." required>
+
+									      <label><b>Product Name</b></label>
+									      <input type="text" placeholder="Product Name" name="Product Name" required>
+
+									      <label><b>Tags</b></label>
+									      <input type="text" placeholder="Tags" name="Tags" required>
+
+									      <label><b>Brand</b></label>
+									      <input type="text" placeholder="Brand" name="Brand" required >
+
+									      <label><b>Supplier</b><label>
+									      <input type="text" placeholder="Supplier" name="Supplier">
+
+												<label><b>Price</b><label>
+									      <input type="text" placeholder="Price" name="Price">
+
+											  <br>
+
+									      <div class="clearfix" align = "center">
+									        <button type="button" onclick="document.getElementById('id01').style.display='none'" >Cancel</button>
+									        <button type="submit" id="add_product">ADD PRODUCT</button>
+									      </div>
+									    </div>
+									  </form>
+									</div>
+
+									<button onclick="document.getElementById('id02').style.display='block'">DELETE PRODUCT</button>
+
+									<div id="id02" class="modal">
+										<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+										<form class="modal-content animate" action="/action_page.php">
+											<div class="container">
+
+												<label align="center"><h2>DELETE PRODUCT</h2></label>
+												<br>
+
+												<label><b>Delete product by 'Serial No.''</b></label>
+												<input type="text" placeholder="Serial No." name="DSerial No." required>
+
+												<label><b>Delete Product by 'Product Name'</b></label>
+												<input type="text" placeholder="Product Name" name="DProduct Name" required>
+
+												<br>
+
+												<div class="clearfix" align = "center">
+													<button type="button" onclick="document.getElementById('id02').style.display='none'" >Cancel</button>
+													<button type="submit" id="add_product">DELETE PRODUCT</button>
+												</div>
+											</div>
+										</form>
+									</div>
+<br></br>
+									<table>
+									  <tr>
+									    <td> SERIAL No. </td>
+                      <th>PRODUCT</th>
+									    <th>CREATED</th>
+									    <th>TAGS</th>
+									    <th>BRAND</th>
+									    <th>SUPPLIER</th>
+									    <th>PRICE</th>
+											<th> EDIT PRODUCT </th>
+									  </tr>
+									  <tr>
+									    <td>10023</td>
+									    <td>Flo Sunglasses</td>
+									    <td>1 May 2017</td>
+									    <td>Sunglasses</td>
+									    <td>Quay</td>
+									    <td>Flo & rankie</td>
+									    <td>10,000Ksh</td>
+											<td><button type = "button" onclick = "document.getElementById('id03').style.display='block'"> EDIT </button></td>
+									  </tr>
+									  <tr>
+									    <td>10123</td>
+									    <td>Audchild Tee</td>
+									    <td>3 May 2017</td>
+									    <td>T-shirt</td>
+									    <td>Cluse</td>
+									    <td>Flo&Frankie</td>
+									    <td>2,000Ksh</td>
+											<td><button type = "button" onclick = "document.getElementById('id03').style.display='block'"> EDIT </button></td>
+									  </tr>
+									  <tr>
+									    <td>10013</td>
+									    <td>LaBoheme Mesh Strap Watch</td>
+									    <td>6 May 2017</td>
+									    <td>Watch</td>
+									    <td>LaBoheme</td>
+									    <td>Flo&Frankie</td>
+									    <td>5,000Ksh</td>
+											<td><button type = "button" onclick = "document.getElementById('id03').style.display='block'"> EDIT </button></td>
+									  </tr>
+									</table>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="generic.html">Products</a></li>
+
+											</ul>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+										<li class="fa-phone">(000) 000-0000</li>
+										<li class="fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<div id="id03" class="modal">
+				<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+				<form class="modal-content animate" action="/action_page.php">
+					<div class="container">
+						<label align="center"><h2>EDIT PRODUCT</h2></label>
+						<br>
+
+						<label><b>Change the product name</b></label>
+						<input type="text" placeholder="Product Name" name="CProduct" required>
+
+						<label><b>Change Tag</b></label>
+						<input type="text" placeholder="Tag" name="CTag">
+
+						<label><b>Change Brand</b></label>
+						<input type="text" placeholder="Brand" name="CBrand">
+
+						<label><b>Change Supplier</b></label>
+						<input type="text" placeholder="Supplier" name="CSupplier">
+
+						<label><b>Change Price</b></label>
+						<input type="text" placeholder="Price" name="CPrice">
+
+						<br>
+
+						<div class="clearfix" align = "center">
+							<button type="button" onclick="document.getElementById('id03').style.display='none'" >Cancel</button>
+							<button type="submit" id="add_product">DELETE PRODUCT</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+	</body>
+</html>
