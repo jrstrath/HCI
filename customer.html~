@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Products</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>ONLINE POS</strong> by strathmore</a>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+							<!--Top BUttons -->
+								<section>
+									<header class="main">
+										<h1>CUSTOMERS</h1>
+									</header>
+
+									<!--Add a customer-->
+									<button onclick="document.getElementById('id10').style.display='block'">ADD CUSTOMER</button>
+
+									<div id="id10" class="modal">
+									  <span onclick="document.getElementById('id10').style.display='none'" class="close" title="Close Modal">&times;</span>
+									  <form class="modal-content animate" action="/action_page.php">
+									    <div class="container">
+
+									      <label align="center"><h2>Add New Customer</h2></label>
+									      <br>
+
+									      <label><b>First-Name</b></label>
+									      <input type="text" placeholder="First-Name" name="First-Name" required>
+
+									      <label><b>Surname</b></label>
+									      <input type="text" placeholder="Surname" name="Surname" required>
+
+									      <label><b>email</b></label>
+									      <input type="email" placeholder="email" name="email" required>
+
+									      <label><b>Phone No.</b></label>
+									      <input type="text" placeholder="Phone number" name="Phone number" required >
+
+									      <label><b>Telephone</b><label>
+									      <input type="text" placeholder="Telephone" name="Telephone">
+
+											<br>
+
+									      <div class="clearfix" align = "center">
+									        <button type="button" onclick="document.getElementById('id10').style.display='none'">Cancel</button>
+									        <button type="submit" id="add_product">ADD PRODUCT</button>
+									      </div>
+									    </div>
+									  </form>
+									</div>
+
+
+									<!--Create customer group-->
+									<button onclick="document.getElementById('id11').style.display='block'">CREATE GROUP</button>
+
+									<div id="id11" class="modal">
+										<span onclick="document.getElementById('id11').style.display='none'" class="close" title="Close Modal">&times;</span>
+										<form class="modal-content animate" action="/action_page.php">
+											<div class="container">
+
+												<label align="center"><h2>Create Customer Group</h2></label>
+												<br>
+
+												<label><b>Select Customer</b></label>
+												<select placeholder = "Select Customer" name="select customer" required>
+													<!--
+														Fetch from database
+													-->
+													<option value="John Doe">John Doe</option>
+													<option value="Mary Jane">Mary Jane</option>
+												</select>
+
+												<label><b>Existing group</b></label>
+												<select placeholder = "Select group" name="group" id= "exgroup">
+													<!--
+														Fetch from database
+													-->
+													<option value="VIPs">John Doe</option>
+													<option value="Staff">Mary Jane</option>
+												</select>
+
+												<label><b>New group</b></label>
+												<input type="text" placeholder="Enter the new name" name="newgroup" id="newgroup">
+
+												<br>
+
+												<div class="clearfix" align = "center">
+													<button type="button" onclick="document.getElementById('id11').style.display='none'" >Cancel</button>
+													<button type="submit" id="create_group">CREATE</button>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									
+									<!--Add a discount to a certain group-->
+									<button onclick="document.getElementById('id12').style.display='block'">GROUP DISCOUNT</button>
+
+									<div id="id12" class="modal">
+										<span onclick="document.getElementById('id12').style.display='none'" class="close" title="Close Modal">&times;</span>
+										<form class="modal-content animate" action="/action_page.php">
+											<div class="container">
+
+												<label align="center"><h2>Add a discount</h2></label>
+												<br>
+
+												<label><b>Select Customer Group</b></label>
+												<select placeholder = "Select Customer Group" name="select customer group" required>
+													<!--
+														Fetch from database
+													-->
+													<option value="all">All customers</option>
+													<option value="VIPs">VIPs</option>
+													<option value="Staff">Staff</option>
+												</select>
+
+
+												<label><b>Product Serial Number</b></label>
+												<input type="text" placeholder="Serial Number" name="serial number" required>
+
+												<label><b>Enter Discount</b></label>
+												<input type="Number" placeholder="discount" name="discount" required> 
+
+												<br>
+
+												<div class="clearfix" align = "center">
+													<button type="button" onclick="document.getElementById('id12').style.display='none'" >Cancel</button>
+													<button type="submit" id="group_discount">SAVE</button>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									<!--Debiit customer account-->
+									<button onclick="document.getElementById('id13').style.display='block'">DEBIT ACCOUNT</button>
+
+									<div id="id13" class="modal">
+										<span onclick="document.getElementById('id13').style.display='none'" class="close" title="Close Modal">&times;</span>
+										<form class="modal-content animate" action="/action_page.php">
+											<div class="container">
+
+												<label align="center"><h2>Debit Customer account</h2></label>
+												<br>
+
+												<label><b>Customer ID</b></label>
+												<input type="text" placeholder="customer_id" name="discount" required>
+
+
+												<label><b>Amount to be debited</b></label>
+												<input type="number" placeholder="Amount" name="debit" required>
+
+												<label><b>Confirm amount</b></label>
+												<input type="Number" placeholder="confirm amount" name="confirm_discount" required> 
+
+												<br>
+
+												<div class="clearfix" align = "center">
+													<button type="button" onclick="document.getElementById('id13').style.display='none'" >Cancel</button>
+													<button type="submit" id="debit_account">SAVE</button>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									<!--Give a coupon-->
+									<button onclick="document.getElementById('id14').style.display='block'">GIVE COUPON</button>
+
+									<div id="id14" class="modal">
+										<span onclick="document.getElementById('id14').style.display='none'" class="close" title="Close Modal">&times;</span>
+										<form class="modal-content animate" action="/action_page.php">
+											<div class="container">
+
+												<label align="center"><h2>Give a Coupon</h2></label>
+												<br>
+
+												<label><b>Customer ID</b></label>
+												<input type="text" placeholder="discount" name="discount" required>
+
+
+												<label><b>Amount</b></label>
+												<input type="number" placeholder="debit" name="debit" required>
+
+												<label><b>Date</b></label>
+												<input type="Date" placeholder="Date" name="date" required> 
+
+												<br>
+
+												<div class="clearfix" align = "center">
+													<button type="button" onclick="document.getElementById('id14').style.display='none'" >Cancel</button>
+													<button type="submit" id="debit_account">SAVE</button>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									<!--Redeem a coupon-->
+									<button onclick="document.getElementById('id15').style.display='block'">REDEEM COUPON</button>
+
+									<div id="id15" class="modal">
+										<span onclick="document.getElementById('id15').style.display='none'" class="close" title="Close Modal">&times;</span>
+										<form class="modal-content animate" action="/action_page.php">
+											<div class="container">
+
+												<label align="center"><h2>Redeem a Coupon</h2></label>
+												<br>
+
+												<label><b>Coupon Number</b></label>
+												<input type="text" placeholder="coupon number" name="coupon" required>
+
+
+												<label><b>Customer Name</b></label>
+												<input type="text" placeholder="Customer" name="customer_name" required>
+
+												<label><b>Date redeemed</b></label>
+												<input type="Date" placeholder="Date Redeemed" name="redeem_date" required> 
+
+												<br>
+
+												<div class="clearfix" align = "center">
+													<button type="button" onclick="document.getElementById('id15').style.display='none'" >Cancel</button>
+													<button type="submit" id="debit_account">SAVE</button>
+												</div>
+											</div>
+										</form>
+									</div>
+
+
+<br></br>
+									
+								</section>
+
+								<!-- DashBoard content-->
+
+								<h3 style="center"> The dashboard requires the database</h3>
+								<h4> The dashboard will have graphs on </br>
+									<ul>
+										<li>most loyal customer (calculated by loyalty points</li>
+										<li>average spending of customers</li>
+									</ul></h4>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="generic.html">Products</a></li>
+										<li><a href = "customer.html">Customers</a></li>
+											</ul>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>You can always find us in the ICS 2019 class.</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">icsgroup5@strathmore.edu</a></li>
+										<li class="fa-phone">(254) 702 243411</li>
+										<li class="fa-home">(254) 718 411007<br />
+										Strathmore University, Ole Sangale Road, Madaraka </li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Reserved for the HCI group 5 class project<a href="index.html"> POS Management System</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<div id="id03" class="modal">
+				<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+				<form class="modal-content animate" action="/action_page.php">
+					<div class="container">
+						<label align="center"><h2>EDIT PRODUCT</h2></label>
+						<br>
+
+						<label><b>Change the product name</b></label>
+						<input type="text" placeholder="Product Name" name="CProduct" required>
+
+						<label><b>Change Tag</b></label>
+						<input type="text" placeholder="Tag" name="CTag">
+
+						<label><b>Change Brand</b></label>
+						<input type="text" placeholder="Brand" name="CBrand">
+
+						<label><b>Change Supplier</b></label>
+						<input type="text" placeholder="Supplier" name="CSupplier">
+
+						<label><b>Change Price</b></label>
+						<input type="text" placeholder="Price" name="CPrice">
+
+						<br>
+
+						<div class="clearfix" align = "center">
+							<button type="button" onclick="document.getElementById('id03').style.display='none'" >Cancel</button>
+							<button type="submit" id="add_product">DELETE PRODUCT</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+	</body>
+</html>
